@@ -6,6 +6,11 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: write  # Cấp quyền ghi vào repository
+  pages: write     # Cấp quyền deploy Pages
+  id-token: write  # Cấp quyền xác thực OIDC
+
 jobs:
   test:
     runs-on: ubuntu-latest
